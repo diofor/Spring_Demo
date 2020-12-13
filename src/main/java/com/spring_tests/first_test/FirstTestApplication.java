@@ -22,6 +22,6 @@ public class FirstTestApplication {
 
 	@GetMapping("/random")
 	public String random_number() {
-		return "Your random number is " + Math.random();
+		return "Your random number is " + Math.round(Math.random()*10);
 	}
 }
