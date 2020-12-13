@@ -19,4 +19,13 @@ public class FirstTestApplication {
 	public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
 	return String.format("Hello %s!", name);
 	}
+
+	public void helperfunction(){
+		System.out.println("nobody shoud see this");
+	}
+
+	@GetMapping("/random")
+	public String random_number() {
+		return "Your random number is " + Math.random();
+	}
 }
